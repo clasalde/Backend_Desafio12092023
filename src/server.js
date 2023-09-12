@@ -15,6 +15,7 @@ const PORT = 8080;
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(__dirname + "/public"))
+
 //handlebars
 app.engine("handlebars", handlebars.engine())
 app.set("views", __dirname + "/views")
@@ -27,7 +28,7 @@ app.use("/", viewRouter)
 
 
 const httpServer = app.listen(PORT, () => {
-    console.log("server up ")
+    console.log(`Server up running on PORT: ${PORT}`)
 })
 
 const pmanager = new ProductManager(__dirname + "/database/products.json")
