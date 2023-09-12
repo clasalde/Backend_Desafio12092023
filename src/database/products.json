@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "Kamado Black",
+    "description": "Kamado japonés para exterior",
+    "price": 230000,
+    "category": "Kamados",
+    "status": true,
+    "thumbnail": "Ruta_Imagen.webp",
+    "code": "Kam1000",
+    "stock": 7
+  },
+  {
+    "id": 2,
+    "title": "Kamado Celta",
+    "description": "Kamado alta temperatura",
+    "price": 175000,
+    "category": "Kamados",
+    "status": true,
+    "thumbnail": "Ruta_Imagen.webp",
+    "code": "Kam2500",
+    "stock": 3
+  },
+  {
+    "id": 3,
+    "title": "Kamado Italy",
+    "description": "Kamado ArtDeco",
+    "price": 350000,
+    "category": "Kamados",
+    "status": true,
+    "thumbnail": "Ruta_Imagen.webp",
+    "code": "Kam3700",
+    "stock": 2
+  }
+]

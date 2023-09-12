@@ -2,14 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
-    background: #161623;
+    background: #19c7fc;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
 }
 
@@ -19,7 +19,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
 }
 
 .container {
@@ -27,25 +26,12 @@ body {
 }
 
 .container .card {
-    background: #232323;
-    width: 320px;
+    margin: 8px 8px;
+    background: #707070;
+    width: 350px;
     height: 450px;
     position: relative;
-    border-radius: 20px;
     overflow: hidden;
-}
-
-.container .card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #B6FCFD;
-    -webkit-clip-path: circle(150px at 80% 20%);
-    clip-path: circle(150px at 80% 20%);
-    transition: 0.5s ease-in-out;
 }
 
 .container .card:hover .imgBx {
@@ -81,7 +67,6 @@ body {
 }
 
 .container .card:after {
-    content: "Nike";
     position: absolute;
     top: 30%;
     left: -20%;
@@ -145,22 +130,18 @@ body {
     color: #fff;
     font-weight: 300;
     font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
     margin-right: 10px;
 }
 
 .container .card .contentBx .size span {
-    width: 26px;
-    height: 26px;
-    text-align: center;
-    line-height: 24px;
-    font-size: 14px;
-    display: inline-block;
-    color: #111;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #fff;
-    border-radius: 4px;
-    margin: 0 5px;
+    border-radius: 5px;
+    margin: 0 3px;
     transition: 0.5s;
     cursor: pointer;
 }
@@ -263,7 +244,7 @@ body {
 
 #formProduct .botons {
     width: 100%;
-    background: #1f53c5;
+    background: #2d02b9;
     border: none;
     padding: 12px;
     color: white;

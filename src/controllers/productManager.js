@@ -4,7 +4,7 @@ export default class ProductManager {
     constructor(path) {
         (this.path = path), (this.products = []);
     }
-    //READ
+
     getProducts = async (info) => {
 
         try {
@@ -47,9 +47,6 @@ export default class ProductManager {
         }
     };
 
-
-
-    //GENERATE ID
     generateId = async () => {
         try {
             if (fs.existsSync(this.path)) {
@@ -67,7 +64,6 @@ export default class ProductManager {
         }
     };
 
-    //CREATE
     addProduct = async (obj) => {
         const { title, description, price, thumbnail, category, status = true, code, stock } = obj
         if (!title || !description || !price || !category || !code || !status || !stock) {
@@ -102,7 +98,6 @@ export default class ProductManager {
         }
     };
 
-    //UPDATE
     updateProduct = async (id, obj) => {
         const { pid } = id
         const { title, description, price, category, thumbnail, status, code, stock } = obj
@@ -138,12 +133,10 @@ export default class ProductManager {
                     }
                 });
                 await fs.promises.writeFile(this.path, JSON.stringify(newProductsList, null, 2));
-
             }
         }
     };
 
-    //DELETE
     deleteProduct = async (id) => {
         const allproducts = await this.getProducts({});
         const productswithoutfound = allproducts.filter(
@@ -152,6 +145,5 @@ export default class ProductManager {
         await fs.promises.writeFile(this.path, JSON.stringify(productswithoutfound, null, 2)
         );
         return "Producto Eliminado"
-
     };
 }

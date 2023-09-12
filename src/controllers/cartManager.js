@@ -5,7 +5,7 @@ export default class CartManager {
         this.path = path,
             this.carts = []
     }
-    //READ
+
     getCarts = async () => {
         if (fs.existsSync(this.path)) {
             const cartlist = await fs.promises.readFile(this.path, "utf-8")
@@ -15,9 +15,7 @@ export default class CartManager {
         else {
             return []
         }
-
     }
-
 
     getCartbyId = async (id) => {
 
@@ -38,7 +36,7 @@ export default class CartManager {
             return (error);
         }
     }
-    //GENERATE ID 
+
     generatecartId = async () => {
         try {
             if (fs.existsSync(this.path)) {
@@ -55,6 +53,7 @@ export default class CartManager {
             throw new Error(error);
         }
     }
+
     addCart = async () => {
         const listaCarts = await this.getCarts();
         const id = await this.generatecartId();
@@ -65,7 +64,6 @@ export default class CartManager {
         listaCarts.push(cartNew);
         await fs.promises.writeFile(this.path, JSON.stringify(listaCarts, null, 2));
     }
-
 
     addProductToCart = async (cid, pid) => {
         const listaCarts = await this.getCarts();
@@ -85,4 +83,4 @@ export default class CartManager {
 
         await fs.promises.writeFile(this.path, JSON.stringify(listaCarts, null, 2));
     }
-}
+};
