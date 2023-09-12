@@ -20,10 +20,9 @@ function updateProductList(products) {
           <h2>${product.title}</h2>
           <div class="size">
             <h3>${product.description}</h3>
-            <span>7</span>
-            <span>8</span>
-            <span>9</span>
-            <span>10</span>
+            <span>SM</span>
+            <span>MD</span>
+            <span>LG</span>
           </div>
           <div class="color">
             <h3>${product.price}</h3>
@@ -31,7 +30,7 @@ function updateProductList(products) {
             <span></span>
             <span></span>
           </div>
-          <a href="#">Buy Now</a>
+          <a href="#">Comprar</a>
         </div>
       </div>
       
